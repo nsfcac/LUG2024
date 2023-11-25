@@ -5,6 +5,9 @@ const nextConfig = {
 
     // Add basePath
     basePath: '/lug2024',
+    images: {
+        unoptimized: true,
+    },
 }
 
 module.exports = nextConfig
