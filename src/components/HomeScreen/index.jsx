@@ -6,7 +6,7 @@ import {useFrame, useThree} from "@react-three/fiber";
 import { easing } from 'maath'
 import {basePath} from "../../../next.config";
 
-export default function(){
+export default function HomeScreen(){
     return (
         <>
             <ambientLight intensity={0.3} />

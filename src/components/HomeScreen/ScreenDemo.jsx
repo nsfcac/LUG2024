@@ -5,7 +5,7 @@ import {Text3D, useGLTF} from "@react-three/drei";
 import {basePath} from "../../../next.config";
 import {useThree} from "@react-three/fiber";
 
-export default function (props) {
+export default function ScreenDemo (props) {
     // const [matcapTexture] = useMatcapTexture("CB4E88_F99AD6_F384C3_ED75B9");
     const { nodes, materials } = useGLTF(`${basePath}/cowboyhat.glb`)
     const ref = useRef();
