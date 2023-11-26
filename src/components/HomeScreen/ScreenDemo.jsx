@@ -1,12 +1,12 @@
 'use client'
 
 import {useRef} from "react";
-import {Text3D, useGLTF, useMatcapTexture} from "@react-three/drei";
+import {Text3D, useGLTF} from "@react-three/drei";
 import {basePath} from "../../../next.config";
 import {useThree} from "@react-three/fiber";
 
 export default function (props) {
-    const [matcapTexture] = useMatcapTexture("CB4E88_F99AD6_F384C3_ED75B9");
+    // const [matcapTexture] = useMatcapTexture("CB4E88_F99AD6_F384C3_ED75B9");
     const { nodes, materials } = useGLTF(`${basePath}/cowboyhat.glb`)
     const ref = useRef();
     const { width: w, height: h } = useThree((state) => state.viewport);
