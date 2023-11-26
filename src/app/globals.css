@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,14 +20,23 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /*background: linear-gradient(*/
+  /*    to bottom,*/
+  /*    transparent,*/
+  /*    rgb(var(--background-end-rgb))*/
+  /*  )*/
+  /*  rgb(var(--background-start-rgb));*/
+  background: #f0f0f0;
 }
 
 .nav-button {
-
+  @apply text-xl border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 px-1 m-1 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit md:rounded-xl md:border md:bg-gray-200 md:p-4 md:dark:bg-zinc-800/30;
+  @apply hover:shadow-2xl hover:font-bold ;
 }
+
+.nav-button.highlight {
+  @apply from-red-800 bg-red-900 text-white font-bold;
+}
+/*.nav .nav-button:first-child {*/
+/*  @apply */
+/*}*/
