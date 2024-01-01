@@ -1,46 +1,62 @@
-import Image from "next/image";
 import Link from "next/link";
-import {basePath} from "../../../next.config";
+import {useEffect} from "react";
+import "./header.scss"
+import useGeneralStore from "@/store/generalStore";
+import {stickyNav} from "@/utilits";
 
 export default function Header () {
-    return <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <div className="fixed left-0 top-0 flex w-full justify-center lg:static lg:w-auto  ">
-            <Link href={"/"}>
-                <p className="nav-button highlight">Home</p>
-            </Link>
-            <Link href={"/agenda"}>
-                <p className="nav-button">Agenda</p>
-            </Link>
-            <Link href={"/call-for-presentations"}>
-                <p className="nav-button">
-                    Call for Presentations</p>
-            </Link>
-            <Link href={"/student-support"}>
-                <p className="nav-button">
-                    Student support</p>
-            </Link>
-            <Link href={"/getting-here"}>
-                <p className="nav-button">
-                    Getting here</p>
-            </Link>
+    const setNavigationToggle = useGeneralStore((state) => state.setNavigationToggle);
+    useEffect(() => {
+        stickyNav();
+    }, []);
+    return <header id="header">
+        <div className="header">
+            <div className="header_in">
+                <div className="trigger_logo">
+                    <div className="trigger" onClick={() => setNavigationToggle(true)}>
+                        <span />
+                    </div>
+                    <div className="logo">
+                        <Link href="/">
+                            <img src="/img/logo.png" alt="" />
+                        </Link>
+                    </div>
+                </div>
+                <div className="nav" style={{ opacity: 1 }}>
+                    <ul>
+                        <li>
+                            <Link href="/#home" className="interactive_link">
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/#about" className="interactive_link">
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/#collection" className="interactive_link">
+                                Collection
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/#news" className="interactive_link">
+                                Blog
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/#contact" className="interactive_link">
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="regis">
+                    <Link href="/registration" className="interactive_link">
+                        Registration
+                    </Link>
+                </div>
+            </div>
         </div>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-            <a
-                className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                By{' '}
-                <Image
-                    src={`${basePath}/vercel.svg`}
-                    alt="Vercel Logo"
-                    className="dark:invert"
-                    width={100}
-                    height={24}
-                    priority
-                />
-            </a>
-        </div>
-    </div>
+    </header>
 }

@@ -1,0 +1,31 @@
+.fn_mobnav {
+  @apply block lg:hidden overflow-hidden;
+}
+.fn_mobnav .social_trigger {
+  @apply flex items-center;
+}
+.fn_mobnav .social_trigger .trigger {
+  @apply mr-5;
+}
+.fn_mobnav .mob_mid, .fn_mobnav .mob_top {
+  @apply flex items-center justify-between overflow-hidden p-5 bg-highlight;
+}
+.fn_mobnav .mob_bot {
+  @apply hidden bg-primarytext-100 px-6 py-5 overflow-hidden;
+  transition: all 0.3s ease;
+}
+.fn_mobnav .mob_bot ul {
+  margin: 0;
+  list-style-type: none;
+}
+.fn_mobnav .mob_bot li {
+  @apply px-2 py-0 m-0;
+}
+.fn_mobnav .mob_bot a {
+  @apply leading-7;
+}
+.fn_mobnav .social {
+  @apply flex items-center;
+}
+
+/*# sourceMappingURL=style.css.map */

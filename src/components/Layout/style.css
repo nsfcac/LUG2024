@@ -1,0 +1,25 @@
+.holder_content {
+  @apply flex flex-col min-h-[100vh];
+}
+
+.interactive_link {
+  @apply bg-gradient-to-r from-primarytext-600 via-primarytext-600 via-50% to-black to-50% inline-block relative;
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.interactive_link:before {
+  content: "";
+  @apply bg-primary block absolute -bottom-2 left-0 w-0 h-1;
+  transition: all 0.3s ease-in-out;
+}
+.interactive_link:hover {
+  background-position: 0;
+}
+.interactive_link:hover:before {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

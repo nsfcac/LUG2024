@@ -2,9 +2,9 @@
 const nextConfig = {
     output: 'export',
     reactStrictMode: true,
-
-    // Add basePath
-    basePath: '/lug2024',
+    //
+    // // Add basePath
+    // basePath: '/lug2024',
     images: {
         unoptimized: true,
     },

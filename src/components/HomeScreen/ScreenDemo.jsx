@@ -9,7 +9,11 @@ export default function ScreenDemo (props) {
     // const [matcapTexture] = useMatcapTexture("CB4E88_F99AD6_F384C3_ED75B9");
     const { nodes, materials } = useGLTF(`${basePath}/cowboyhat.glb`)
     const ref = useRef();
-    const { width: w, height: h } = useThree((state) => state.viewport);
+    const { w, h, minD } = useThree((state) => {
+        const { width: w, height: h } = state.viewport;
+        const minD = Math.min(w,h);
+        return {w,h,minD}
+    });
     return (<group
         {...props}
         dispose={null}
@@ -18,7 +22,7 @@ export default function ScreenDemo (props) {
         // rotation={[Math.PI/12, Math.PI/10, 0]}
     >
         <mesh castShadow geometry={nodes.hat.geometry}
-              scale={w/400}
+              scale={minD/400}
               position={[-w/4+w/40,w/10,w/30]}
               rotation = {[Math.PI/10,Math.PI/3,Math.PI/6]}
               material={materials.mat} material-roughness={1} {...props} dispose={null}>
@@ -28,8 +32,8 @@ export default function ScreenDemo (props) {
             material-roughness={1}
             position={[-w/4,0,0]}
             maxWidth={[-w / 5, -h * 2, 4]}
-            size={w/9}
-            height={w/25}
+            size={minD/9}
+            height={minD/25}
             font={`${basePath}/gt_font.json`}>
             L
             <meshStandardMaterial color={'white'} />
@@ -38,7 +42,7 @@ export default function ScreenDemo (props) {
         <Text3D
             castShadow
             position={[-w/5.5,0,0]}
-            maxWidth={[-w / 5, -h * 2, 3]}
+            maxWidth={[-minD / 5, -h * 2, 3]}
             size={w/9}
             height={w/25}
             font={`${basePath}/gt_font.json`}>
@@ -50,7 +54,7 @@ export default function ScreenDemo (props) {
             castShadow
 
             position={[-(w/5-w/9),0,0]}
-            maxWidth={[-w / 5, -h * 2, 3]}
+            maxWidth={[-minD / 5, -h * 2, 3]}
             size={w/9}
             height={w/25}
             font={`${basePath}/gt_font.json`}>
