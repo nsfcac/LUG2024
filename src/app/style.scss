@@ -1,0 +1,121 @@
+.fn_cs_hero_slider canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fn_cs_hero_slider{
+  position: relative;
+  z-index: 5;
+  padding: 160px 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.fn_cs_hero_slider .bg_overlay{
+  background-color: rgba(0,0,0,0.5);
+}
+.fn_cs_hero_slider .fn__maintitle{
+  margin-bottom: 40px;
+}
+.fn_cs_hero_slider p{
+  margin-bottom: 40px;
+}
+.fn_cs_hero_slider .left_part{
+  width: 480px;
+  max-width: 45%;
+  padding: 0 60px 0 80px;
+  -webkit-flex: none;
+  -moz-flex: none;
+  -ms-flex: none;
+  -o-flex: none;
+  flex: none;
+  position: relative;
+  z-index: 5;
+}
+.fn_cs_hero_slider .slider_part{
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+.fn_cs_hero_slider .swiper-container{
+  padding: 20px 0 20px 20px;
+}
+.fn_cs_hero_slider .swiper-slide{
+  width: 450px;
+}
+.fn_cs_hero_slider .item img{
+  min-width: 100%;
+  margin-bottom: 33%;
+  opacity: 0;
+}
+.fn_cs_hero_slider .item{
+  position: relative;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,.05);
+  z-index: 2;
+  transition: all .3s ease;
+}
+.fn_cs_hero_slider .item:before{
+  border: 1px solid rgba(255,255,255,.5);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+.fn_cs_hero_slider .item:hover:after{
+  opacity: .5;
+}
+.fn_cs_hero_slider .item:after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: var(--mc1);
+  opacity: .15;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px;
+  transition: all .3s ease;
+}
+.fn_cs_hero_slider .img_holder{
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.fn_cs_hero_slider .swiper-wrapper{
+  transition-timing-function : ease-out;
+}
+@media(max-width: 1040px){
+  .fn_cs_hero_slider{
+    padding: 130px 0;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+  }
+  .fn_cs_hero_slider .left_part{
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 20px 40px;
+  }
+  .fn_cs_hero_slider .swiper-slide{
+    width: 350px;
+  }
+}
