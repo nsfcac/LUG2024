@@ -1,3 +1,28 @@
+.bg_overlay .bg_image,
+.bg_overlay .bg_color,
+.bg_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg_overlay .bg_color {
+  z-index: 2;
+}
+
+.fn_cs_hero_slider {
+  @apply flex relative items-center py-36;
+  z-index: 5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .fn_cs_hero_slider canvas {
   position: absolute;
   top: 0;
@@ -5,35 +30,15 @@
   right: 0;
   bottom: 0;
 }
-
-.fn_cs_hero_slider {
-  position: relative;
-  z-index: 5;
-  padding: 160px 0;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .fn_cs_hero_slider .bg_overlay {
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 .fn_cs_hero_slider .fn__maintitle {
   margin-bottom: 40px;
 }
-
 .fn_cs_hero_slider p {
   margin-bottom: 40px;
 }
-
 .fn_cs_hero_slider .left_part {
   width: 480px;
   max-width: 45%;
@@ -46,7 +51,6 @@
   position: relative;
   z-index: 5;
 }
-
 .fn_cs_hero_slider .slider_part {
   width: 100%;
   position: relative;

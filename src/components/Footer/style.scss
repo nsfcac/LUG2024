@@ -1,0 +1,31 @@
+#footer{
+  @apply mt-auto bg-primarytext-200;
+  padding: 34px 0 32px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.footer{
+  @apply flex flex-col gap-x-10 items-start;
+  @apply md:flex-row md:items-center md:justify-between;
+  p{
+    @apply m-0 text-lg tracking-normal;
+    a{
+      color: #fff;
+      text-decoration: none;
+      &:hover{
+        @apply text-secondary;
+      }
+    }
+  }
+  ul{
+    @apply m-0 list-none -ml-12 flex flex-wrap;
+  }
+  li {
+    @apply m-0 ml-12;
+    a{
+      @apply text-lg tracking-normal decoration-0;
+    }
+  }
+  .left_part{
+    @apply mb-2 md:mb-0;
+  }
+}

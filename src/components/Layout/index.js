@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import { dataBgImg, holdSection, imgToSVG } from "@/utilits";
-import Footer from "./Footer";
+import Footer from "../Footer";
 import Header from "../Header";
 import MobileNavigation from "../MobileNavigation";
 import Navigation from "../Navigation";

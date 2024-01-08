@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tsparticles/shape-circle": "^3.0.3",
     "clsx": "^2.0.0",
     "maath": "^0.10.4",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
     "react-tsparticles": "^2.12.2",
+    "react-visibility-sensor": "^5.1.1",
     "sass": "^1.69.6",
     "swiper": "^11.0.5",
+    "tsparticles": "^3.0.3",
     "waypoints": "^4.0.1",
     "zustand": "^4.4.7"
   },

@@ -17,13 +17,11 @@ export default function Home() {
                   <div className="bg_overlay"></div>
                   <div className="left_part">
                       <h3 className="fn__maintitle big" data-text="Meta Legends">
-                          Meta Legends
+                          LUG'24
                       </h3>
                       <p>
-                          Meta Legends represent a collection of 17,000 legends categorized
-                          by level of rarity and generated with hundreds of elements. The
-                          Legends are stored as ERC-721 tokens on the Ethereum blockchain
-                          and hosted on IPFS.
+                          May 6th - 9th, 2024
+                          Texas Tech University
                       </p>
                       <a
                           href="https://opensea.io/"
@@ -35,6 +33,8 @@ export default function Home() {
                       </a>
                   </div>
                   <ParticlesBackground />
+                  <div className="slider_part">
+                  </div>
               </div>
           </section>
       </Layout>
